@@ -1,10 +1,9 @@
 
 /* Section 1:
 Q1: What does the acronym DRY stand for? Why should we pay attention to it? What programming tools have we learned to write DRY code?
+A1: Don’t Repeat Yourself(DRY). It allows for the code to be more efficient (time and resources). So far, we have used HTML, CSS, and Javascript to write DRY code.
 
 Q2:What is the difference between const and let and var? Please limit your answer to no more than three short sentences. Don't be afraid to research using google and other resources
-
-A1: Don’t Repeat Yourself(DRY). It allows for the code to be more efficient (time and resources). So far, we have used HTML, CSS, and Javascript to write DRY code.
 A2: Const = are variables that cannot be updated or re-declared
     Let = preferred for variable declaration. Can be updated but not re-declared
     Var = is an older form of javascript variable. Can be updated and re-declared
@@ -25,11 +24,16 @@ const f = false;
 console.log(a < b)
 console.log(c > d)
 console.log('Name' === 'Name')
-console.log(a < b < c)
-console.log(a === a !== d)
+console.log(a + b === c)
+console.log(a * a === d)
 console.log(e !== 'Kevin')
 console.log(48 !== '48')
 console.log(f !== e)
+
+//BONUS
+// > , < !== and ===.
+a < (b || f) === !f && e !== c
+
 
 //Set a new variable g to 0
 var g = 0;
