@@ -1,12 +1,12 @@
 
 /* Section 1:
 Q1: What does the acronym DRY stand for? Why should we pay attention to it? What programming tools have we learned to write DRY code?
-A1: Don’t Repeat Yourself(DRY). It allows for the code to be more efficient (time and resources). So far, we have used HTML, CSS, and Javascript to write DRY code.
+A1: Don’t Repeat Yourself(DRY). It allows for the code to be more efficient (time and resources). Functions are a great representaion of DRY principles in action.
 
 Q2:What is the difference between const and let and var? Please limit your answer to no more than three short sentences. Don't be afraid to research using google and other resources
-A2: Const = are variables that cannot be updated or re-declared
-    Let = preferred for variable declaration. Can be updated but not re-declared
-    Var = is an older form of javascript variable. Can be updated and re-declared
+A2: Const = are variables that cannot be reassigned, Immutable variables
+    Let = Can be reassigned, Mutable varibales
+    Var = A function scoped variable that takes advantage of Hoisting, allowing this variable to move through scope freely. Very Mutable, seen in legacy code.
 */
 
 
@@ -36,11 +36,11 @@ a < (b || f) === !f && e !== c
 
 
 //Set a new variable g to 0
-var g = 0;
+let g = 0; // By using let you do not have to re-delcare your varable 
 console.log (g);
 
 //Then set the variable g to be equal to b + c
-var g = b + c;
+g = b + c; // This will allow you to re-assign the value of said variable
 console.log (g);
 
 //BONUS
@@ -63,8 +63,8 @@ while (runProgram) {
 	runProgram = false;
 }
 
-Answer: This loop is an infinite loop. Even though the code try to reassign the variable to 'false' since the original variable is a const it cannot be changed.
-The output would be 'Do not run this loop' over and over again.
+Answer: This is not an infinate loop, The program will error out with an Uncaught TypeError: Assignment to a constant variable.
+line 63 will terminate this loop when run by throwing an error.
 */
 
 // creates a variable called 'letters' and assigns "A"
@@ -76,7 +76,7 @@ let i = 0;
     The while loop adds an additiona "A" every time it runs.
     The end of the loop adds one to variable i.
 */
-while (i < 20) {
+while (i <= 20) { // less than or Equal to 20
 	letters += "A";
 	i++;
 }
@@ -91,7 +91,11 @@ console.log(letters);
 // The second part of the control panel is: Condition
 // The third part of the control panel is: increments or decrements
 
-for (let i = 0; i < 1000; i++) {
+for (
+	let i = 0; // Initialization of variables (you can declare more than one) to be used
+	i < 1000; // An expression/condition that evaulates to a Boolean value (true/false)
+	i++ // updater, how the counting/memoing variable {i} will behave
+) { // code to be executed scoped to this code block, so long as the expression remains false
     console.log(i);
 }
 
@@ -105,6 +109,14 @@ for (let i = 999; i > -1; i--) {
     console.log(i);
 }
 
+// Another way to write the above code block with a do{code} while(conditional) loop
+
+let i = 999
+do {
+    console.log(i)
+    --i // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
+} while ( i > 0 ) // While i > 0 execute the do scoped block of code.
+
 for (let i = 1; i <= 10; i++) {
     console.log("The value of i is: " + i + " of 10");
 }
@@ -113,3 +125,6 @@ const StarWars = ["Han", "C3PO", "R2D2", "Luke", "Leia", "Anakin"];
 for (let i=0; i < StarWars.length; i++){
     console.log(StarWars[i]);
 }
+
+// This is the same as above another way.
+StarWars.forEach((name) => console.log(name))
