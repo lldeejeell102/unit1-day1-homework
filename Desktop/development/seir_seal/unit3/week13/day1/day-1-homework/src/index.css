@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html{
+  background-color: #353535;
+  color: whitesmoke
+}
+.div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  border: .25px solid #E6C79C;
+  width: 95%;
+}
+.links{
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+.links a {
+  background-color: #437C90;
+  color: black;
+  border: 1px solid #5B6057;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1.5px solid #000000;
+  border-bottom: 1.5px solid #000000;
+  border-left: 1px solid #9b9b9b;
+}
+a:hover{
+  background-color: #392F5A;
+}
+a:link, a:visited, a:active{
+  color: none;
+  text-decoration: none;
+}
+
+
+.Main{
+  width:100%;
+  margin-top: 3rem;
+}
+.project-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  border: .5px solid #E6C79C;
+  padding: 1rem;
+}
+.projects a{
+  background-color: #437C90;
+  color: black;
+  border: 1px solid #5B6057;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-top: 1px solid #9b9b9b;
+  border-right: 1.5px solid #000000;
+  border-bottom: 1.5px solid #000000;
+  border-left: 1px solid #9b9b9b;
+}
+.projects a:hover{
+  background-color: #392F5A;
+}
+h3 {
+  border-bottom: 3px ridge #6FD08C;
+  padding: .25rem;
+}
+
+
+.img{
+  height: 35vh;
+  object-fit: cover;
+}
+
+
+.footer {
+  margin-top: 5rem;
+  display: flex;
+  background-color: #141414;
+  width: 100%;
+}
+.footer form{
+  padding-top: 2rem;
+}
+
+
+.footer-newsletter{
+  padding-left: 10rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer-project{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-service{
+  padding-left: 2rem;
+  padding-right: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
